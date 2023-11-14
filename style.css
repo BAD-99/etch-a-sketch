@@ -14,13 +14,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 button{
     background-color: #a8c64e;
     color: #3c412c;
     border: 4px solid #3c412c;
     width: 128px;
-    margin-top: 64px;
+    margin-top: 20px;
     height: 64px;
     padding: 0px;
     font-size: 32px;
@@ -33,7 +34,23 @@ button:hover{
     transition: 400ms;
 }
 .grid-square{
-    background-color: aqua;
+    background-color: #a8c64e;
     width: 12px;
-    height: 12px;
+    aspect-ratio: 1/1;
+    transition: 10s;
+}
+.grid-square:hover{
+    background-color: #3c412c;
+    transition: 20ms;
+}
+.grid-container{
+    display: flex;
+    width: 40%;
+    aspect-ratio: 1/1;
+    flex-wrap: wrap;
+    margin: 20px;
+    border: 4px solid #3c412c;
+}
+@media screen and (max-width: 1200px) {
+    .grid-container{width: 60%;}
 }
